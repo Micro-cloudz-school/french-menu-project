@@ -11,29 +11,46 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Style the header */
 .header {
   background-color: #f1f1f1;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
-  font-size: 35px;
+  font-size: 24px;
+  margin-top: 20px;
 }
 
 /* Container for flexboxes */
 .row {
   display: -webkit-flex;
   display: flex;
+  flex-wrap: wrap;
 }
 
-/* Create three equal columns that sits next to each other */
+/* Create equal columns that sit next to each other */
 .column {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  padding: 15px;
+  margin: 5px;
+  min-width: 200px;
+}
+
+/* Image Placeholder Styling */
+.food-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #ddd;
+  border: 2px dashed #888;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: block;
 }
 
 /* Style the footer */
@@ -41,9 +58,10 @@ body {
   background-color: #f1f1f1;
   padding: 10px;
   text-align: center;
+  margin-top: 20px;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Responsive layout - stacks columns on mobile screens */
 @media (max-width: 600px) {
   .row {
     -webkit-flex-direction: column;
@@ -54,75 +72,132 @@ body {
 </head>
 <body>
 
-<h2>Nourriture destinée à la consommation</h2>
-<p>Nourriture délicieuse au hasard</p>
-<p>Veuillez faire votre choix parmi nos mets délicieux et insolites.</p>
-<p><strong>Note:</strong> This website is not supported in Internet Explorer 10 and earlier versions. If you do use internet explorer 10 and earlier, you don't deserve to see this website at that point.</p>
+<div style="padding: 20px;">
+  <h2>Nourriture destinée à la consommation</h2>
+  <p>Nourriture délicieuse au hasard</p>
+  <p>Veuillez faire votre choix parmi nos mets délicieux et insolites.</p>
+  <p><strong>Note:</strong> This website is not supported in Internet Explorer 10 and earlier versions. If you do use internet explorer 10 and earlier, you don't deserve to see this website at that point.</p>
+</div>
 
+<!-- LES ENTRÉES -->
 <div class="header">
   <h1>Les Entrées</h1>
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">Assiette de crevettes - Crevettes, citrons, laitue et glace</div>
-  <div class="column" style="background-color:#bbb;">Boulettes de poulet au parmesan - Poulet et parmesan enrobés de pâte</div>
-  <div class="column" style="background-color:#ccc;">Nuggets lapins - Nuggets de poulet en forme de lapins
-</div>
+  <div class="column" style="background-color:#aaa;">
+    <img src="https://placehold.co/300x200?text=Assiette+de+crevettes" alt="Assiette de crevettes" class="food-img">
+    <p><strong>Assiette de crevettes</strong> - Crevettes, citrons, laitue et glace</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <img src="https://placehold.co/300x200?text=Boulettes+de+poulet" alt="Boulettes de poulet au parmesan" class="food-img">
+    <p><strong>Boulettes de poulet au parmesan</strong> - Poulet et parmesan enrobés de pâte</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <img src="https://placehold.co/300x200?text=Nuggets+lapins" alt="Nuggets lapins" class="food-img">
+    <p><strong>Nuggets lapins</strong> - Nuggets de poulet en forme de lapins</p>
+  </div>
 </div>
 
 <div class="footer">
   <p>Do it in canva or docs, he said. Honestly, I'd have spontaneously combusted if I couldn't make a website.</p>
 </div>
 
+<!-- LES PLATS PRINCIPAUX -->
 <div class="header">
-  <h1>Les Plat Principal</h1>
+  <h1>Les Plats Principaux</h1>
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">Nugget lapin géant - Un énorme nugget de poulet en forme de lapin !</div>
-  <div class="column" style="background-color:#bbb;">Macaronis au fromage et au homard - Des macaronis au fromage onctueux accompagnés de homard juteux</div>
-  <div class="column" style="background-color:#ccc;">Wrap au jambon et au pesto - un délicieux jambon accompagné d'une sauce au pesto frais, enveloppé dans une tortilla
-</div>
-  <div class="column" style="background-color:#ddd;">Stromboli aux champignons – Champignons, jambon et fromage dans un stromboli</div>
-    <div class="column" style="background-color:#eee;">La spécialité des amateurs de viande - du poulet frit enrobé de bacon moelleux nappé d'un glaçage à l'érable</div>
+  <div class="column" style="background-color:#aaa;">
+    <img src="https://placehold.co/300x200?text=Nugget+lapin+geant" alt="Nugget lapin géant" class="food-img">
+    <p><strong>Nugget lapin géant</strong> - Un énorme nugget de poulet en forme de lapin !</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <img src="https://placehold.co/300x200?text=Macaronis+au+homard" alt="Macaronis au fromage et au homard" class="food-img">
+    <p><strong>Macaronis au fromage et au homard</strong> - Des macaronis au fromage onctueux accompagnés de homard juteux</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <img src="https://placehold.co/300x200?text=Wrap+jambon+pesto" alt="Wrap au jambon et au pesto" class="food-img">
+    <p><strong>Wrap au jambon et au pesto</strong> - Un délicieux jambon accompagné d'une sauce au pesto frais, enveloppé dans une tortilla</p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <img src="https://placehold.co/300x200?text=Stromboli+champignons" alt="Stromboli aux champignons" class="food-img">
+    <p><strong>Stromboli aux champignons</strong> – Champignons, jambon et fromage dans un stromboli</p>
+  </div>
+  <div class="column" style="background-color:#eee;">
+    <img src="https://placehold.co/300x200?text=Specialite+viande" alt="La spécialité des amateurs de viande" class="food-img">
+    <p><strong>La spécialité des amateurs de viande</strong> - Du poulet frit enrobé de bacon moelleux nappé d'un glaçage à l'érable</p>
+  </div>
 </div>
 
+<!-- DESSERT -->
 <div class="header">
   <h1>Dessert</h1>
 </div>
-  
-  <div class="row">
-  <div class="column" style="background-color:#aaa;">Harmonie aquatique - Un cube creux de glace à l'eau sucrée, contenant de l'eau sucrée, et un autre cube creux de glace flottant, rempli d'eau sucrée vaporisée sous pression
-</div>
-  <div class="column" style="background-color:#bbb;">Bâtonnets de milkshake : un milkshake glacé à l'intérieur de tubes de bretzels chauds.</div>
-  <div class="column" style="background-color:#ccc;">Tarte-cookie moelleuse : un cookie géant aux pépites de chocolat que l'on peut découper en parts
-</div>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <img src="https://placehold.co/300x200?text=Harmonie+aquatique" alt="Harmonie aquatique" class="food-img">
+    <p><strong>Harmonie aquatique</strong> - Un cube creux de glace à l'eau sucrée, contenant de l'eau sucrée, et un autre cube creux de glace flottant, rempli d'eau sucrée vaporisée sous pression</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <img src="https://placehold.co/300x200?text=Batonnets+de+milkshake" alt="Bâtonnets de milkshake" class="food-img">
+    <p><strong>Bâtonnets de milkshake</strong> - Un milkshake glacé à l'intérieur de tubes de bretzels chauds.</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <img src="https://placehold.co/300x200?text=Tarte-cookie" alt="Tarte-cookie moelleuse" class="food-img">
+    <p><strong>Tarte-cookie moelleuse</strong> - Un cookie géant aux pépites de chocolat que l'on peut découper en parts</p>
+  </div>
 </div>
 
-  <div class="header">
+<!-- ACCOMPAGNEMENTS -->
+<div class="header">
   <h1>Accompagnements</h1>
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">Bouchées de poutine - Des bouchées composées de tous les ingrédients de la poutine</div>
-  <div class="column" style="background-color:#bbb;">Frites au nacho et sauce - Frites saupoudrées d'assaisonnement pour nachos, accompagnées d'une sauce à la mayonnaise, à l'habanero épicé ou au cheddar
-</div>
-  <div class="column" style="background-color:#ccc;">Hashbrowns - Purée de pommes de terre façonnée en galette et frite
-</div>
+  <div class="column" style="background-color:#aaa;">
+    <img src="https://placehold.co/300x200?text=Bouchees+de+poutine" alt="Bouchées de poutine" class="food-img">
+    <p><strong>Bouchées de poutine</strong> - Des bouchées composées de tous les ingrédients de la poutine</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <img src="https://placehold.co/300x200?text=Frites+au+nacho" alt="Frites au nacho et sauce" class="food-img">
+    <p><strong>Frites au nacho et sauce</strong> - Frites saupoudrées d'assaisonnement pour nachos, accompagnées d'une sauce à la mayonnaise, à l'habanero épicé ou au cheddar</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <img src="https://placehold.co/300x200?text=Hashbrowns" alt="Hashbrowns" class="food-img">
+    <p><strong>Hashbrowns</strong> - Purée de pommes de terre façonnée en galette et frite</p>
+  </div>
 </div>
 
-  <div class="header">
+<!-- LES BOISSONS -->
+<div class="header">
   <h1>Les Boissons</h1>
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">Milkshake (fraise, chocolat, cookies et crème, mangue, vanille)</div>
-  <div class="column" style="background-color:#bbb;">Frappuccino au crumble de biscuits au moka</div>
-  <div class="column" style="background-color:#ccc;">Latte au pain d'épices</div>
-  <div class="column" style="background-color:#ddd;">Thé mousseux au milkshake à la framboise bleue</div>
-    <div class="column" style="background-color:#eee;">Purée de haricots épicée</div>
+  <div class="column" style="background-color:#aaa;">
+    <img src="https://placehold.co/300x200?text=Milkshake" alt="Milkshake" class="food-img">
+    <p><strong>Milkshake</strong> (fraise, chocolat, cookies et crème, mangue, vanille)</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <img src="https://placehold.co/300x200?text=Frappuccino+moka" alt="Frappuccino au crumble" class="food-img">
+    <p><strong>Frappuccino au crumble de biscuits au moka</strong></p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <img src="https://placehold.co/300x200?text=Latte+pain+depices" alt="Latte au pain d'épices" class="food-img">
+    <p><strong>Latte au pain d'épices</strong></p>
+  </div>
+  <div class="column" style="background-color:#ddd;">
+    <img src="https://placehold.co/300x200?text=The+mousseux" alt="Thé mousseux" class="food-img">
+    <p><strong>Thé mousseux au milkshake à la framboise bleue</strong></p>
+  </div>
+  <div class="column" style="background-color:#eee;">
+    <img src="https://placehold.co/300x200?text=Puree+de+haricots" alt="Purée de haricots épicée" class="food-img">
+    <p><strong>Purée de haricots épicée</strong></p>
+  </div>
 </div>
-  
+
 </body>
 </html>
-
