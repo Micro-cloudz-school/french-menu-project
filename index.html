@@ -15,11 +15,14 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #faf6f0;
+  color: #2c221e;
 }
 
 /* Style the header */
 .header {
-  background-color: #f1f1f1;
+  background-color: #8c2d19;
+  color: #ffffff;
   padding: 20px;
   text-align: center;
   font-size: 24px;
@@ -28,6 +31,12 @@ body {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  box-shadow: 0 4px 6px -1px rgba(140, 45, 25, 0.15);
+}
+
+.header h1 {
+  margin: 0;
+  color: #ffffff;
 }
 
 /* Container for flexboxes */
@@ -39,6 +48,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  padding: 10px;
 }
 
 /* Create equal columns that sit next to each other */
@@ -47,8 +57,17 @@ body {
   -ms-flex: 1;
   flex: 1;
   padding: 15px;
-  margin: 5px;
+  margin: 8px;
   min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border: 1px solid rgba(140, 45, 25, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.column:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
 }
 
 /* Image Placeholder Styling */
@@ -56,8 +75,8 @@ body {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  background-color: #ddd;
-  border: 2px dashed #888;
+  background-color: #e6ded6;
+  border: 2px dashed #b5a89b;
   border-radius: 6px;
   margin-bottom: 12px;
   display: block;
@@ -65,7 +84,8 @@ body {
 
 /* Style the footer */
 .footer {
-  background-color: #f1f1f1;
+  background-color: #f0e6da;
+  color: #5c473e;
   padding: 10px;
   text-align: center;
   margin-top: 20px;
@@ -73,6 +93,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: italic;
+  border-top: 2px solid #dfcfbe;
 }
 
 /* Responsive layout - stacks columns on mobile screens */
@@ -86,10 +107,10 @@ body {
 </head>
 <body>
 
-<div style="padding: 20px;">
-  <div class="header"><h1>Nourriture destinée à la consommation</h2></div>
-  <h3 style='font-family: "Plus Jakarta Sans", sans-serif; font-optical-sizing: auto; font-weight: 460; font-style: normal; text-align: center;'>Nourriture délicieuse au hasard</h3>
-  <p style='font-family: "Plus Jakarta Sans", sans-serif; font-optical-sizing: auto; font-weight: 420; font-style: normal; text-align: center;'>Veuillez faire votre choix parmi nos mets délicieux et insolites.</p>
+<div style="padding: 20px; background-color: #fff9f2; border-bottom: 3px solid #8c2d19;">
+  <div class="header"><h1>Nourriture destinée à la consommation</h1></div>
+  <h3 style='font-family: "Plus Jakarta Sans", sans-serif; font-optical-sizing: auto; font-weight: 460; font-style: normal; text-align: center; color: #8c2d19; margin-top: 15px;'>Nourriture délicieuse au hasard</h3>
+  <p style='font-family: "Plus Jakarta Sans", sans-serif; font-optical-sizing: auto; font-weight: 420; font-style: normal; text-align: center; color: #6e584f;'>Veuillez faire votre choix parmi nos mets délicieux et insolites.</p>
 </div>
 
 <!-- LES ENTRÉES -->
@@ -98,17 +119,17 @@ body {
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
+  <div class="column" style="background-color:#fffdfa;">
     <img src="Images/shrimp-platter.jpg" alt="Assiette de crevettes" class="food-img">
-    <p><strong>Assiette de crevettes</strong> - Crevettes, citrons, laitue et glace</p>
+    <p><strong style="color: #8c2d19;">Assiette de crevettes</strong> - Crevettes, citrons, laitue et glace</p>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="column" style="background-color:#fcf8f2;">
     <img src="Images/chicken-parmesan-balls.jpeg" alt="Boulettes de poulet au parmesan" class="food-img">
-    <p><strong>Boulettes de poulet au parmesan</strong> - Poulet et parmesan enrobés de pâte</p>
+    <p><strong style="color: #8c2d19;">Boulettes de poulet au parmesan</strong> - Poulet et parmesan enrobés de pâte</p>
   </div>
-  <div class="column" style="background-color:#ccc;">
+  <div class="column" style="background-color:#f9f3ea;">
     <img src="Images/bunny-nuggets.jpeg" alt="Nuggets lapins" class="food-img">
-    <p><strong>Nuggets lapins</strong> - Nuggets de poulet en forme de lapins</p>
+    <p><strong style="color: #8c2d19;">Nuggets lapins</strong> - Nuggets de poulet en forme de lapins</p>
   </div>
 </div>
 
@@ -122,25 +143,25 @@ body {
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
+  <div class="column" style="background-color:#fffdfa;">
     <img src="Images/massive-bunny-nugget.jpeg" alt="Nugget lapin géant" class="food-img">
-    <p><strong>Nugget lapin géant</strong> - Un énorme nugget de poulet en forme de lapin !</p>
+    <p><strong style="color: #8c2d19;">Nugget lapin géant</strong> - Un énorme nugget de poulet en forme de lapin !</p>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="column" style="background-color:#fcf8f2;">
     <img src="Images/lobster-mac-and-cheese.jpeg" alt="Macaronis au fromage et au homard" class="food-img">
-    <p><strong>Macaronis au fromage et au homard</strong> - Des macaronis au fromage onctueux accompagnés de homard juteux</p>
+    <p><strong style="color: #8c2d19;">Macaronis au fromage et au homard</strong> - Des macaronis au fromage onctueux accompagnés de homard juteux</p>
   </div>
-  <div class="column" style="background-color:#ccc;">
+  <div class="column" style="background-color:#f9f3ea;">
     <img src="Images/ham-pesto-wrap.webp" alt="Wrap au jambon et au pesto" class="food-img">
-    <p><strong>Wrap au jambon et au pesto</strong> - Un délicieux jambon accompagné d'une sauce au pesto frais, enveloppé dans une tortilla</p>
+    <p><strong style="color: #8c2d19;">Wrap au jambon et au pesto</strong> - Un délicieux jambon accompagné d'une sauce au pesto frais, enveloppé dans une tortilla</p>
   </div>
-  <div class="column" style="background-color:#ddd;">
+  <div class="column" style="background-color:#f5ede0;">
     <img src="Images/mushroham-stromboli.webp" alt="Stromboli aux champignons" class="food-img">
-    <p><strong>Stromboli aux champignons</strong> – Champignons, jambon et fromage dans un stromboli</p>
+    <p><strong style="color: #8c2d19;">Stromboli aux champignons</strong> – Champignons, jambon et fromage dans un stromboli</p>
   </div>
-  <div class="column" style="background-color:#eee;">
+  <div class="column" style="background-color:#f0e6d5;">
     <img src="Images/fried-chicken-maple-bacon.jpeg" alt="La spécialité des amateurs de viande" class="food-img">
-    <p><strong>La spécialité des amateurs de viande</strong> - Du poulet frit enrobé de bacon moelleux nappé d'un glaçage à l'érable</p>
+    <p><strong style="color: #8c2d19;">La spécialité des amateurs de viande</strong> - Du poulet frit enrobé de bacon moelleux nappé d'un glaçage à l'érable</p>
   </div>
 </div>
 
@@ -150,17 +171,17 @@ body {
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
+  <div class="column" style="background-color:#fffdfa;">
     <img src="Images/water-harmony.jpeg" alt="Harmonie aquatique" class="food-img">
-    <p><strong>Harmonie aquatique</strong> - Un cube creux de glace à l'eau sucrée, contenant de l'eau sucrée, et un autre cube creux de glace flottant, rempli d'eau sucrée vaporisée sous pression</p>
+    <p><strong style="color: #8c2d19;">Harmonie aquatique</strong> - Un cube creux de glace à l'eau sucrée, contenant de l'eau sucrée, et un autre cube creux de glace flottant, rempli d'eau sucrée vaporisée sous pression</p>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="column" style="background-color:#fcf8f2;">
     <img src="Images/milkshake-sticks.jpeg" alt="Bâtonnets de milkshake" class="food-img">
-    <p><strong>Bâtonnets de milkshake</strong> - Un milkshake glacé à l'intérieur de tubes de bretzels chauds.</p>
+    <p><strong style="color: #8c2d19;">Bâtonnets de milkshake</strong> - Un milkshake glacé à l'intérieur de tubes de bretzels chauds.</p>
   </div>
-  <div class="column" style="background-color:#ccc;">
+  <div class="column" style="background-color:#f9f3ea;">
     <img src="Images/soft-bake-cookie-pie.jpeg" alt="Tarte-cookie moelleuse" class="food-img">
-    <p><strong>Tarte-cookie moelleuse</strong> - Un cookie géant aux pépites de chocolat que l'on peut découper en parts</p>
+    <p><strong style="color: #8c2d19;">Tarte-cookie moelleuse</strong> - Un cookie géant aux pépites de chocolat que l'on peut découper en parts</p>
   </div>
 </div>
 
@@ -170,17 +191,17 @@ body {
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
+  <div class="column" style="background-color:#fffdfa;">
     <img src="https://alimentspaysanne.com/uploads/produits/_medium/1963/Bouchee-Poutine-0544.webp" alt="Bouchées de poutine" class="food-img">
-    <p><strong>Bouchées de poutine</strong> - Des bouchées composées de tous les ingrédients de la poutine</p>
+    <p><strong style="color: #8c2d19;">Bouchées de poutine</strong> - Des bouchées composées de tous les ingrédients de la poutine</p>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="column" style="background-color:#fcf8f2;">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf7BlaOUHZ8WuAt0yEWbZt8N3YH7GeXkxoly52Qew0_eOI6E8Se3uyO5bD&s=10" alt="Frites au nacho et sauce" class="food-img">
-    <p><strong>Frites au nacho et sauce</strong> - Frites saupoudrées d'assaisonnement pour nachos, accompagnées d'une sauce à la mayonnaise, à l'habanero épicé ou au cheddar</p>
+    <p><strong style="color: #8c2d19;">Frites au nacho et sauce</strong> - Frites saupoudrées d'assaisonnement pour nachos, accompagnées d'une sauce à la mayonnaise, à l'habanero épicé ou au cheddar</p>
   </div>
-  <div class="column" style="background-color:#ccc;">
+  <div class="column" style="background-color:#f9f3ea;">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG-GvtpVUZfr2zwN3JaeeNEAJM5nJdu5NJOzyrVzxHuAzLQRj8XJPwc8Ad&s=10" alt="Hashbrowns" class="food-img">
-    <p><strong>Hashbrowns</strong> - Purée de pommes de terre façonnée en galette et frite</p>
+    <p><strong style="color: #8c2d19;">Hashbrowns</strong> - Purée de pommes de terre façonnée en galette et frite</p>
   </div>
 </div>
 
@@ -189,17 +210,17 @@ body {
   <h1>Soupes et salades</h1>
 </div>
   <div class="row">
-  <div class="column" style="background-color:#aaa;">
+  <div class="column" style="background-color:#fffdfa;">
     <img src="https://madcreationshub.com/wp-content/uploads/2018/11/Mad-Creations-Cheese-Smoky-Chicken-Ranch-Salad-ketodiet-healthyfats-lowcarb.jpg" alt="Salade ranch au poulet fumé" class="food-img">
-    <p><strong>Salade ranch au poulet fumé</strong> – Une salade classique, mais agrémentée d’une vinaigrette ranch onctueuse et de délicieux morceaux de poulet fumé</p>
+    <p><strong style="color: #8c2d19;">Salade ranch au poulet fumé</strong> – Une salade classique, mais agrémentée d’une vinaigrette ranch onctueuse et de délicieux morceaux de poulet fumé</p>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="column" style="background-color:#fcf8f2;">
     <img src="https://ournourishingtable.com/wp-content/uploads/2025/03/Mexican-Chicken-Salad-2.jpg" alt="Salade de poulet aux fèves à la tex-mex" class="food-img">
-    <p><strong>Salade de poulet aux fèves à la tex-mex</strong> – Salade de poulet et de fèves aux influences texanes et mexicaines</p>
+    <p><strong style="color: #8c2d19;">Salade de poulet aux fèves à la tex-mex</strong> – Salade de poulet et de fèves aux influences texanes et mexicaines</p>
   </div>
-  <div class="column" style="background-color:#ccc;">
+  <div class="column" style="background-color:#f9f3ea;">
     <img src="https://ameessavorydish.com/wp-content/uploads/2015/03/Mexican-shrimp-salad-post-14.jpg" alt="Salade de crevettes mexicaines grillées" class="food-img">
-    <p><strong>Salade de crevettes mexicaines grillées</strong> – Crevettes grillées, haricots, laitue, oignon, poivron, maïs, le tout mélangé pour former une symphonie de saveurs</p>
+    <p><strong style="color: #8c2d19;">Salade de crevettes mexicaines grillées</strong> – Crevettes grillées, haricots, laitue, oignon, poivron, maïs, le tout mélangé pour former une symphonie de saveurs</p>
   </div>
 </div>
 
@@ -209,25 +230,25 @@ body {
 </div>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
+  <div class="column" style="background-color:#fffdfa;">
     <img src="https://www.thehungrybites.com/wp-content/uploads/2023/06/Strawberry-milkshake-frappuccino-featured.jpg" alt="Milkshake" class="food-img">
-    <p><strong>Milkshake</strong> (fraise, chocolat, cookies et crème, mangue, vanille)</p>
+    <p><strong style="color: #8c2d19;">Milkshake</strong> (fraise, chocolat, cookies et crème, mangue, vanille)</p>
   </div>
-  <div class="column" style="background-color:#bbb;">
+  <div class="column" style="background-color:#fcf8f2;">
     <img src="https://www.eatingonadime.com/wp-content/uploads/2023/05/200-300KB-Mocha-Cookie-Crumble-Frappuccino-13-1.jpg" alt="Frappuccino au crumble" class="food-img">
-    <p><strong>Frappuccino au crumble de biscuits au moka</strong></p>
+    <p><strong style="color: #8c2d19;">Frappuccino au crumble de biscuits au moka</strong></p>
   </div>
-  <div class="column" style="background-color:#ccc;">
+  <div class="column" style="background-color:#f9f3ea;">
     <img src="https://thebigmansworld.com/wp-content/uploads/2024/09/gingerbread-latte.jpg" alt="Latte au pain d'épices" class="food-img">
-    <p><strong>Latte au pain d'épices</strong></p>
+    <p><strong style="color: #8c2d19;">Latte au pain d'épices</strong></p>
   </div>
-  <div class="column" style="background-color:#ddd;">
+  <div class="column" style="background-color:#f5ede0;">
     <img src="Images/raspberry-froth-tea.jpeg" alt="Thé mousseux" class="food-img">
-    <p><strong>Thé mousseux au milkshake à la framboise bleue</strong></p>
+    <p><strong style="color: #8c2d19;">Thé mousseux au milkshake à la framboise bleue</strong></p>
   </div>
-  <div class="column" style="background-color:#eee;">
+  <div class="column" style="background-color:#f0e6d5;">
     <img src="Images/spicy-bean-slurry.jpeg" alt="Purée de haricots épicée" class="food-img">
-    <p><strong>Purée de haricots épicée</strong></p>
+    <p><strong style="color: #8c2d19;">Purée de haricots épicée</strong></p>
   </div>
 </div>
 
